@@ -1,5 +1,8 @@
 package org.example.app_com_interface;
 
+import atlantafx.base.theme.CupertinoDark;
+import atlantafx.base.theme.CupertinoLight;
+import atlantafx.base.theme.NordLight;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,9 +17,10 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
+        Application.setUserAgentStylesheet(new CupertinoDark().getUserAgentStylesheet());
 
         // Carrega a tela inicial (login.fxml)
-        trocadorDeTelas("login.fxml");
+        trocadorDeTelas("hello-view.fxml");
 
         primaryStage.setTitle("Sistema genérico");
         primaryStage.show();
@@ -38,6 +42,7 @@ public class HelloApplication extends Application {
 
         // Define a cena no Stage principal
         primaryStage.setScene(scene);
+
     }
 
     public static void main(String[] args) {

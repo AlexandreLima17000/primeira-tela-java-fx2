@@ -17,12 +17,11 @@ public class HelloController {
     Button btnLogin;
     @FXML
     Label labelLogin;
-    @FXML
-    private 
+
 
     @FXML
-    protected void irParaTelaCadastro() throws IOException {
-        HelloApplication.trocadorDeTelas("cadastro.fxml");
+    protected void trocadorDeTelas() throws IOException {
+       HelloApplication.trocadorDeTelas("cadastro.fxml");
     }
 
 

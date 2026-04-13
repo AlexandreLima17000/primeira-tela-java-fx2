@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -23,10 +24,14 @@
             <HBox alignment="CENTER" prefHeight="26.0" prefWidth="400.0" spacing="35.0">
                <children>
                   <CheckBox mnemonicParsing="false" text="Lembrar senha" />
-                  <Hyperlink text="Criar conta" />
+                  <Hyperlink onAction="#trocadorDeTelas" text="Criar conta" />
                </children>
             </HBox>
-            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#onButtonLoginClick" text="Login" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#onButtonLoginClick" text="Login">
+               <styleClass>
+                  <String fx:value="accent" />
+                  <String fx:value="button_outlined" />
+               </styleClass></Button>
             <Label fx:id="labelLogin" textFill="#00ff1e" />
          </children>
       </VBox>
