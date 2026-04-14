@@ -1,0 +1,34 @@
+.btn-primario {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-font-weight: bold;
+}
+
+.btn-primario:hover {
+    -fx-background-color: #4338ca;
+}
+
+/* Fundo principal com o gradiente colorido */
+.container {
+    -fx-background-color: linear-gradient(to right, #0ed2da, #5f29c7);
+}
+
+/* Camada de sobreposição para o gradiente branco (fade) */
+.overlay-fade {
+    -fx-background-color: linear-gradient(to bottom,
+    white 0%,
+    white 40%,
+    transparent 100%);
+}
+
+/* Camada para as linhas do Grid (simulando o ::before) */
+.grid-lines {
+    /* Criamos um padrão de repetição para as linhas verticais */
+    -fx-background-color: repeat, linear-gradient(to right, #ccc 1px, transparent 1px);
+    -fx-background-size: 50px 100%;
+
+    /* No JavaFX, o efeito de 'mask-image' é mais complexo via CSS puro.
+       Uma alternativa comum é usar a opacidade gradual no próprio nó. */
+    -fx-opacity: 0.5;
+}
