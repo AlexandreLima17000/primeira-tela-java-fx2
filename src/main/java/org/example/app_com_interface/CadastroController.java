@@ -12,6 +12,8 @@ public class CadastroController {
     @FXML
     private TextField campoUsuario;
     @FXML
+    private TextField campoEmail;
+    @FXML
     private PasswordField campoSenha;
     @FXML
     private PasswordField campoConfimarSenha;
@@ -28,10 +30,11 @@ public class CadastroController {
     @FXML
     public void onCadastrarClick() {
         String usuario = campoUsuario.getText();
+        String email = campoEmail.getText();
         String senha = campoSenha.getText();
         String confirmarsenha = campoConfimarSenha.getText();
 
-        if (usuario.isBlank ()|| senha.isBlank() || confirmarsenha.isBlank()){
+        if (usuario.isBlank() || senha.isBlank() || confirmarsenha.isBlank()) {
             Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setTitle("Campos obrigatório");
             alerta.setHeaderText(null);
@@ -41,7 +44,7 @@ public class CadastroController {
             return;
         }
 
-        if(!(senha.equals(confirmarsenha))){
+        if (!(senha.equals(confirmarsenha))) {
             Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setTitle("Senhas não conferem");
             alerta.setHeaderText(null);
@@ -52,6 +55,19 @@ public class CadastroController {
         }
         CadastroDAO dao = new CadastroDAO();
 
+        dao.cadastrarUsuario(usuario, email, senha);
+
+
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Cadastro realizado");
+        alerta.setHeaderText(null);
+        alerta.setContentText("Usuario`" + usuario + "`cadastrado com sucesso!");
+        alerta.showAndWait();
+
+        campoUsuario.clear();
+        campoEmail.clear();
+        campoSenha.clear();
+        campoConfimarSenha.clear();
     }
 
 }

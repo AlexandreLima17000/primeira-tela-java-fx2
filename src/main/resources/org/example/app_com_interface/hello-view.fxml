@@ -24,7 +24,7 @@
             <HBox alignment="CENTER" prefHeight="26.0" prefWidth="400.0" spacing="35.0">
                <children>
                   <CheckBox mnemonicParsing="false" text="Lembrar senha" />
-                  <Hyperlink onAction="#trocadorDeTelas" text="Criar conta" />
+                  <Hyperlink fx:id="trocadorDeTelas" onAction="#trocadorDeTelas" text="Criar conta" />
                </children>
             </HBox>
             <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#onButtonLoginClick" text="Login">

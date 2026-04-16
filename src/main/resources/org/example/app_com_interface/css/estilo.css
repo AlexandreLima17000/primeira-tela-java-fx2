@@ -32,3 +32,9 @@
        Uma alternativa comum é usar a opacidade gradual no próprio nó. */
     -fx-opacity: 0.5;
 }
+.password-field {
+    -fx-background-radius: 5;
+    -fx-border-color: #333;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+}

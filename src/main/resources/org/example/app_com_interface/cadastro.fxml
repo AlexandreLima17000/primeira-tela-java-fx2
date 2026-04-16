@@ -8,12 +8,12 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app_com_interface.CadastroController">
    <left>
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="btn-primario" stylesheets="@css/estilo.css" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="container" stylesheets="@css/estilo.css" BorderPane.alignment="CENTER" />
    </left>
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" stylesheets="@css/estilo.css" BorderPane.alignment="CENTER">
                <children>
                   <TextField fx:id="campoUsuario" promptText="NOME" style="-fx-background-color: #000000;">
                      <VBox.margin>
@@ -28,9 +28,19 @@
                         <Insets left="15.0" right="15.0" />
                      </VBox.margin>
                   </Line>
+                  <TextField fx:id="campoEmail" promptText="EMAIL" style="-fx-background-color: #000000;">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" top="30.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Line endX="100.0" layoutX="300.0" layoutY="136.0" startX="-271.0">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </Line>
                   <PasswordField fx:id="campoSenha" promptText="SENHA" style="-fx-background-color: FFFFFF;">
                      <VBox.margin>
-                        <Insets left="15.0" right="15.0" top="15.0" />
+                        <Insets left="15.0" right="15.0" top="25.0" />
                      </VBox.margin>
                   </PasswordField>
                   <Line endX="100.0" layoutX="301.0" layoutY="136.0" startX="-275.0">
@@ -40,7 +50,7 @@
                   </Line>
                   <PasswordField fx:id="campoConfimarSenha" promptText="CONFIRMAR SENHA" style="-fx-background-color: FFFFFF;">
                      <VBox.margin>
-                        <Insets left="15.0" right="15.0" top="15.0" />
+                        <Insets left="15.0" right="15.0" top="30.0" />
                      </VBox.margin>
                   </PasswordField>
                   <Line endX="100.0" startX="-275.0">
@@ -50,7 +60,7 @@
                   </Line>
                   <Button fx:id="btnVoltar" mnemonicParsing="false" onAction="#onVoltarClick" text="VOLTA">
                      <VBox.margin>
-                        <Insets left="50.0" top="30.0" />
+                        <Insets left="70.0" top="40.0" />
                      </VBox.margin></Button>
                   <Button fx:id="btnCriarConta" mnemonicParsing="false" onAction="#onCadastrarClick" text="CRIAR CONTA">
                      <VBox.margin>
